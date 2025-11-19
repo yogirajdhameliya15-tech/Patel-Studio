@@ -1,0 +1,138 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #eef1f7;
+    display: flex;
+}
+
+/* MAIN CONTENT */
+.main {
+    margin-left: 260px;
+    padding: 30px;
+    width: calc(100% - 260px);
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+/* MEMBER TABLE */
+.member-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+.member-table th {
+    background: #0047b3;
+    color: white;
+    padding: 14px;
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+.member-table td {
+    padding: 13px;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 14px;
+    color: #444;
+    text-align: center;
+    background: #fff;
+}
+
+.member-table tr:hover td {
+    background: #f4f7ff;
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0047b3;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 7px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+}
+
+.edit {
+    background: #1e9e45;
+}
+
+.delete {
+    background: #e63946;
+    margin-left: 5px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+/* SIDEBAR FIX */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #002f6c;
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar .brand {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.sidebar .brand img {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.sidebar .brand span {
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.sidebar .link {
+    display: block;
+    padding: 14px 22px;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.sidebar .link:hover,
+.sidebar .link.active {
+    background: #0047b3;
+    transition: 0.3s;
+}

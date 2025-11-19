@@ -1,0 +1,549 @@
+/* ------------------------------------------------------
+   GLOBAL THEME
+------------------------------------------------------ */
+:root{
+    --accent:#00eaff;
+    --bg1:#021024;
+    --bg2:#032142;
+    --bg3:#043B7A;
+    --card-bg:rgba(255,255,255,0.05);
+    --border:rgba(255,255,255,0.12);
+    --text-muted:#b9c9dd;
+    --sidebar:#051629;
+}
+
+/* ------------------------------------------------------
+   BODY
+------------------------------------------------------ */
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
+    color:white;
+    overflow:hidden;
+}
+
+/* ------------------------------------------------------
+   LAYOUT WRAPPER
+------------------------------------------------------ */
+.layout{
+    display:flex;
+    height:100vh;
+}
+
+/* ------------------------------------------------------
+   SIDEBAR
+------------------------------------------------------ */
+.sidebar{
+    width:240px;
+    background:var(--sidebar);
+    padding:20px 0;
+    display:flex;
+    flex-direction:column;
+    border-right:1px solid var(--border);
+}
+
+.sidebar h3{
+    text-align:center;
+    margin:0 0 20px 0;
+    font-size:22px;
+}
+
+.sidebar a{
+    padding:14px 22px;
+    color:white;
+    text-decoration:none;
+    display:block;
+    font-size:16px;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    transition:0.3s;
+}
+
+.sidebar a:hover{
+    background:rgba(255,255,255,0.08);
+    color:var(--accent);
+}
+
+/* ------------------------------------------------------
+   TOP BAR
+------------------------------------------------------ */
+.topbar{
+    width:100%;
+    padding:16px 24px;
+    background:rgba(0,0,0,0.3);
+    border-bottom:1px solid var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    backdrop-filter:blur(4px);
+}
+
+.topbar .logo{
+    font-size:22px;
+    font-weight:bold;
+    color:var(--accent);
+}
+
+.topbar .user{
+    font-size:16px;
+}
+
+/* ------------------------------------------------------
+   MAIN AREA
+------------------------------------------------------ */
+.main{
+    flex:1;
+    padding:30px;
+    overflow-y:auto;
+}
+
+.main h1{
+    margin-top:0;
+    font-size:30px;
+    text-shadow:0 0 10px rgba(0,255,255,0.4);
+}
+
+/* ------------------------------------------------------
+   DASHBOARD CARDS
+------------------------------------------------------ */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:18px;
+    margin:25px 0;
+}
+
+.card{
+    background:var(--card-bg);
+    padding:20px;
+    text-align:center;
+    font-size:20px;
+    border-radius:12px;
+    color:white;
+    text-decoration:none;
+    border:1px solid var(--border);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.04);
+    background:rgba(255,255,255,0.12);
+    border-color:var(--accent);
+    color:var(--accent);
+}
+
+/* ------------------------------------------------------
+   RECENT ACTIVITY TABLE
+------------------------------------------------------ */
+.recent{
+    background:var(--card-bg);
+    padding:20px;
+    border-radius:12px;
+    border:1px solid var(--border);
+    margin-top:20px;
+}
+
+.recent h2{
+    margin:0 0 15px 0;
+    font-size:22px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    text-align:left;
+    padding:10px;
+    background:rgba(255,255,255,0.08);
+    border-bottom:1px solid var(--border);
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid var(--border);
+    color:var(--text-muted);
+}
+
+tr:hover td{
+    background:rgba(255,255,255,0.05);
+    color:white;
+}
+
+/* ------------------------------------------------------
+   SCROLLBAR
+------------------------------------------------------ */
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--accent);
+    border-radius:4px;
+}
+
+::-webkit-scrollbar-track{
+    background:rgba(255,255,255,0.05);
+}
+
+/* TOPBAR */
+.topbar{
+    width:100%;
+    background:rgba(255,255,255,0.06);
+    padding:10px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+/* LEFT LOGO */
+.top-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.top-logo{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid rgba(0,255,255,0.5);
+    box-shadow:0 0 10px rgba(0,255,255,0.4);
+}
+
+.top-title{
+    font-size:24px;
+    font-weight:700;
+    color:var(--accent);
+}
+
+/* RIGHT PROFILE BLOCK */
+.top-right{
+    position:relative;
+    padding-right: 30px;
+}
+
+.profile-box{
+    cursor:pointer;
+}
+
+.top-profile{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    border:2px solid rgba(255,255,255,0.4);
+    object-fit:cover;
+    transition:0.3s;
+}
+
+.top-profile:hover{
+    transform:scale(1.05);
+}
+
+/* DROPDOWN MENU */
+.dropdown{
+    display:none;
+    position:absolute;
+    right:0;
+    top:60px;
+    background:rgba(0,0,0,0.5);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:10px;
+    min-width:180px;
+    padding:8px 0;
+    animation:fadeIn 0.2s ease;
+    padding-right: 25px;
+}
+
+.dropdown.show{
+    display:block;
+}
+
+.dropdown-user{
+    display:block;
+    padding:10px;
+    font-size:14px;
+    color:#00eaff;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.dropdown a{
+    display:block;
+    padding:10px;
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    transition:0.2s;
+}
+
+.dropdown a:hover{
+    background:rgba(255,255,255,0.1);
+}
+
+/* FADE ANIMATION */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(-5px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+ body {
+  background: #f7f7f7;
+  font-family: Arial;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.formBox input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.styleBox {
+  margin-top: 20px;
+}
+
+.styles {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.styleBtn {
+  padding: 8px 16px;
+  border: none;
+  background: #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.styleBtn.active {
+  background: #0078ff;
+  color: #fff;
+}
+
+#qrPreview {
+  margin-top: 30px;
+}
+
+#downloadBtn {
+  margin-top: 25px;
+  padding: 12px 20px;
+  background: #0078ff;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* ===============================
+   GLOBAL STYLES
+================================*/
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
+
+/* Layout container */
+.layout {
+    display: flex;
+    height: calc(100vh - 70px);
+}
+
+/* ===============================
+   TOP BAR
+================================*/
+.topbar {
+    width: 100%;
+    height: 70px;
+    background: #111;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.topbar .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ROUND LOGO FRAME */
+.topbar .logo-wrap .logo-round {
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #ff4747;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.topbar .logo-round img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.topbar .username {
+    font-size: 18px;
+}
+
+/* ===============================
+   SIDEBAR
+================================*/
+.sidebar {
+    width: 240px;
+    background: #222;
+    padding-top: 90px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.sidebar a {
+    display: block;
+    padding: 14px 22px;
+    text-decoration: none;
+    color: #ddd;
+    font-size: 15px;
+    border-bottom: 1px solid #333;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background: #ff4747;
+    color: #fff;
+}
+
+/* ===============================
+   MAIN CONTENT
+================================*/
+.main {
+    margin-left: 240px;
+    padding: 100px 35px 40px 35px;
+}
+
+/* ===============================
+   CARDS
+================================*/
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 35px 20px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #ff4747;
+    color: white;
+}
+
+/* ===============================
+   RECENT ACTIVITY TABLE
+================================*/
+.recent {
+    margin-top: 45px;
+}
+
+.recent h2 {
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+table th {
+    background: #ff4747;
+    color: white;
+    padding: 12px;
+    font-size: 15px;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+table tr:hover {
+    background: #f7f7f7;
+}
+
+/* ===============================
+   RESPONSIVE
+================================*/
+@media(max-width:900px) {
+    .sidebar {
+        width: 180px;
+    }
+    .main {
+        margin-left: 180px;
+    }
+}
+
+@media(max-width:700px) {
+    .sidebar {
+        display: none;
+    }
+    .main {
+        margin-left: 0;
+        padding-top: 120px;
+    }
+}

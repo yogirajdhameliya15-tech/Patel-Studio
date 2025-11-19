@@ -1,0 +1,29 @@
+/* tools_style.css - shared tool styles */
+:root{
+  --bg1:#021024; --bg2:#032142; --accent:#00eaff; --panel:rgba(255,255,255,0.04);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; font-family:Arial, sans-serif;
+  background:linear-gradient(140deg,var(--bg1),var(--bg2));
+  color:#fff;
+}
+.container{
+  max-width:1100px;margin:28px auto;padding:20px;
+  background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);
+  border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,0.6);
+}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.header h1{margin:0;font-size:20px}
+.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.btn{background:var(--accent);border:none;color:#001;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:700}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.08);color:#fff}
+.input, select{padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:#fff}
+.canvas-wrap{display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start}
+.canvas-card{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px}
+label{display:block;margin:8px 0 6px;color:#cfeffb}
+.small{font-size:13px;color:#cfeffb}
+.toolbar{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+#message{margin-top:8px;color:#bfffdc}
+.previewImage{max-width:100%;height:auto;border-radius:8px;border:1px solid rgba(255,255,255,0.06)}
+.footer-note{font-size:13px;color:#9fb2c4;margin-top:12px}

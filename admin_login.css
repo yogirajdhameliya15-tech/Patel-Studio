@@ -1,0 +1,116 @@
+/* ======================================
+   GLOBAL PAGE STYLE
+====================================== */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #0a0f24, #171c34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ======================================
+   LOGIN CARD
+====================================== */
+.login-box {
+    background: #ffffff;
+    width: 360px;
+    padding: 40px 30px;
+    border-radius: 18px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+}
+
+/* ======================================
+   PATEL STUDIO LOGO
+====================================== */
+.logo-frame {
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    border-radius: 50%;
+    margin: -80px auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+.logo-frame img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+/* ======================================
+   TITLE
+====================================== */
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* ======================================
+   INPUTS
+====================================== */
+.login-box input {
+    width: 90%;
+    padding: 12px 14px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.25s;
+}
+
+.login-box input:focus {
+    border-color: #ff4747;
+    outline: none;
+    box-shadow: 0 0 6px rgba(255, 71, 71, 0.4);
+}
+
+/* ======================================
+   BUTTON
+====================================== */
+.login-box button {
+    width: 95%;
+    padding: 13px 15px;
+    background: #ff4747;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.login-box button:hover {
+    background: #e63e3e;
+    transform: translateY(-2px);
+}
+
+/* ======================================
+   ERROR MESSAGE
+====================================== */
+.error {
+    color: red;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+@media (max-width: 420px) {
+    .login-box {
+        width: 85%;
+        padding: 30px;
+    }
+}

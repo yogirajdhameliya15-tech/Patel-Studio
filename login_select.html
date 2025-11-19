@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Login Type</title>
+    <style>
+    body{
+        padding-top: 13%;
+        background-color: linear-gradient(180deg, #061021 0%, #071227 60%);
+    }
+    :root{
+  --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --panel:#0ea5e9;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#061021 0%, #071227 60%);color:#e6eef6}
+
+/* Auth */
+.authBody{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:18px}
+.authContainer{width:100%;max-width:980px;background:rgba(255,255,255,0.03);border-radius:12px;display:flex;overflow:hidden;box-shadow:0 20px 60px rgba(2,6,23,0.6)}
+.leftPanel{flex:0 0 360px;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center}
+.authLogo{width:96px;height:96px;border-radius:12px}
+.muted{color:var(--muted);font-size:14px}
+.roleChoice{display:flex;gap:10px;margin-top:12px}
+.roleBtn{padding:10px 14px;border-radius:8px;border:none;background:var(--panel);color:white;cursor:pointer}
+.roleBtn.outline{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+.info{color:var(--muted);font-size:13px;margin-top:6px}
+.rightPanel{flex:1;padding:24px}
+.authBox{background:transparent;padding:6px}
+.hidden{display:none}
+.authBox h3{margin:0 0 10px 0}
+input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:inherit;margin:8px 0}
+.row{display:flex;gap:12px;align-items:center;justify-content:flex-start;margin-top:8px}
+.small{padding:6px 8px;border-radius:6px;border:none;cursor:pointer}
+.switchRow{display:flex;gap:8px;margin-bottom:10px}
+.small.active{background:var(--accent);color:#001}
+.authBody .muted{color:#9fb2c4}
+@media(max-width:880px){
+  .authContainer{flex-direction:column}
+  .leftPanel{flex:1;width:100%}
+  .rightPanel{width:100%}
+}
+
+    </style>
+</head>
+<body>
+    <center>
+
+         <div class="authContainer">
+    <div class="leftPanel">
+      <img src="assets/logo.png" alt="logo" class="authLogo" />
+      <h2>Patel Studio</h2>
+      <p class="muted">Choose your role and continue</p>
+
+      <div class="roleChoice">
+        <a href="admin_login.php"><button id="chooseAdmin" class="roleBtn">Admin</button></a>
+        <a href="member_login.php"><button id="chooseMember" class="roleBtn outline">Member</button></a>
+      </div>
+
+      <div class="info">Admin has access to Activity Log. Members can signup/login to use tools.</div>
+    </div>
+    </center>
+</body>
+</html>

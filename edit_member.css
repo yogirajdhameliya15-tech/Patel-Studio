@@ -1,0 +1,117 @@
+/* ------------------------------------
+   Patel Studio — Edit Member Page CSS
+-------------------------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #021024;
+    color: #ffffff;
+}
+
+/* MAIN CONTENT */
+.main {
+    margin-left: 260px;       /* space for sidebar */
+    padding: 40px;
+}
+
+/* PAGE TITLE */
+.main h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #00eaff;
+    text-shadow: 0 0 8px #00eaff;
+}
+
+/* CARD */
+.card {
+    background: #062445;
+    padding: 28px;
+    border-radius: 12px;
+    width: 460px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+/* TEXT LABEL */
+label {
+    display: block;
+    font-size: 14px;
+    margin-top: 14px;
+    color: #bfeaff;
+}
+
+/* INPUT FIELDS */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #00eaff;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+}
+
+/* INPUT FOCUS EFFECT */
+input:focus {
+    box-shadow: 0 0 10px #00eaff;
+    border-color: #00eaff;
+}
+
+/* BUTTONS */
+.btn {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    background: #00eaff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    color: #00121f;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #06faff;
+    box-shadow: 0 0 12px #00eaff;
+}
+
+/* CANCEL BUTTON (OUTLINE) */
+.btn.ghost {
+    background: transparent;
+    border: 1px solid #00eaff;
+    color: #00eaff;
+}
+
+.btn.ghost:hover {
+    background: rgba(0, 234, 255, 0.1);
+    box-shadow: 0 0 12px #00eaff;
+}
+
+/* ERROR BOX */
+.alert.error {
+    background: #ff0033;
+    padding: 12px;
+    border-radius: 6px;
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+    border: 1px solid #ff3355;
+}
+
+/* CURRENT PROFILE PHOTO */
+.card img {
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid #00eaff;
+    box-shadow: 0 0 12px #00eaff;
+}
+
